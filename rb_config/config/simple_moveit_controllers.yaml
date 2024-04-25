@@ -1,0 +1,18 @@
+controller_list:
+  - name: group_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Revolute2
+      - Revolute4
+      - Revolute6
+      - Revolute9
+      - Revolute41
+      - Revolute43
+  - name: gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Revolute43

@@ -1,0 +1,19 @@
+controller_list:
+  - name: fake_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - Revolute2
+      - Revolute4
+      - Revolute6
+      - Revolute9
+      - Revolute41
+      - Revolute43
+  - name: fake_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - Revolute43
+initial:  # Define initial robot poses per group
+  - group: group
+    pose: home
+  - group: gripper
+    pose: opening
