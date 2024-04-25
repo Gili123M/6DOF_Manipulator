@@ -1,0 +1,502 @@
+<?xml version="1.0" ?>
+<robot name="rbmuse" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rbmuse_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rbmuse_description)/urdf/rbmuse.trans" />
+<xacro:include filename="$(find rbmuse_description)/urdf/rbmuse.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.026168976468017534 -0.0005496586417581346 0.01778804529166589" rpy="0 0 0"/>
+    <mass value="3.0751047880633586"/>
+    <inertia ixx="0.002856" iyy="0.006289" izz="0.007631" ixy="7e-06" iyz="-1e-06" ixz="0.000585"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor1_1">
+  <inertial>
+    <origin xyz="0.03930371256985485 0.0021696453874637547 -0.008593146614866543" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="6.4e-05" iyy="3.8e-05" izz="4.3e-05" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.079145 0.00249 -0.050267" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.079145 0.00249 -0.050267" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="disk_1">
+  <inertial>
+    <origin xyz="3.492033330554367e-07 9.747354081292986e-07 0.005492676065882121" rpy="0 0 0"/>
+    <mass value="0.5311101141935193"/>
+    <inertia ixx="0.000261" iyy="0.000261" izz="0.000509" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.039762 -0.009587 -0.06413" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/disk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.039762 -0.009587 -0.06413" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/disk_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor2_1">
+  <inertial>
+    <origin xyz="0.0005432628975196307 0.00019610580267081373 0.0102500382122543" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="4.3e-05" iyy="3.8e-05" izz="6.4e-05" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.039761 -0.00959 -0.08013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.039761 -0.00959 -0.08013" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bigu_1">
+  <inertial>
+    <origin xyz="-0.02199563550171054 0.0001809953785818011 0.028905156107693994" rpy="0 0 0"/>
+    <mass value="0.0784222615280103"/>
+    <inertia ixx="3.4e-05" iyy="7.5e-05" izz="5e-05" ixy="0.0" iyz="-0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.016681 -0.01951 -0.090377" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/bigu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.016681 -0.01951 -0.090377" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/bigu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="smallu_1">
+  <inertial>
+    <origin xyz="9.380930374724983e-07 2.4460137672752125e-06 0.011594145388475141" rpy="0 0 0"/>
+    <mass value="0.05393922534960198"/>
+    <inertia ixx="1.2e-05" iyy="3.7e-05" izz="3e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.041679 -0.01972 -0.141378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/smallu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.041679 -0.01972 -0.141378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/smallu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor3_1">
+  <inertial>
+    <origin xyz="-0.024457366779002194 0.00019600493077282302 0.009903111346328625" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="4.3e-05" iyy="6.4e-05" izz="3.8e-05" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015678 -0.019521 -0.172877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015678 -0.019521 -0.172877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lshape_1">
+  <inertial>
+    <origin xyz="-0.1647141046884117 -0.051643015147499916 0.036814200251928664" rpy="0 0 0"/>
+    <mass value="0.03417797904336539"/>
+    <inertia ixx="7e-06" iyy="5e-06" izz="7e-06" ixy="-0.0" iyz="-2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.124023 -0.069424 -0.173711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/lshape_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.124023 -0.069424 -0.173711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/lshape_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="smallu1_1">
+  <inertial>
+    <origin xyz="6.186610709002505e-07 2.474644159582151e-06 0.011593815204141433" rpy="0 0 0"/>
+    <mass value="0.05393922534960198"/>
+    <inertia ixx="1.2e-05" iyy="3.7e-05" izz="3e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.040561 -0.034179 -0.217975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/smallu1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.040561 -0.034179 -0.217975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/smallu1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor4_1">
+  <inertial>
+    <origin xyz="-0.024379636684416315 0.010095761121906667 -1.7608738211438713e-06" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="4.3e-05" iyy="3.8e-05" izz="6.4e-05" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01456 -0.03398 -0.249474" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01456 -0.03398 -0.249474" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lshape2_1">
+  <inertial>
+    <origin xyz="-0.24047463918656625 0.07237662687230707 0.06742629492159574" rpy="0 0 0"/>
+    <mass value="0.03417797904336539"/>
+    <inertia ixx="7e-06" iyy="5e-06" izz="7e-06" ixy="-0.0" iyz="-2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.201205 0.001699 -0.199743" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/lshape2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.201205 0.001699 -0.199743" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/lshape2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor5_1">
+  <inertial>
+    <origin xyz="0.08165331636898154 0.2981306692560505 0.059107909660422175" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="3.8e-05" iyy="4.3e-05" izz="6.4e-05" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.11088 0.197184 -0.220601" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.11088 0.197184 -0.220601" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gbase_1">
+  <inertial>
+    <origin xyz="-0.0008440157289839254 0.030131425640598536 -7.070589467750299e-06" rpy="0 0 0"/>
+    <mass value="0.03250334179699039"/>
+    <inertia ixx="1.1e-05" iyy="5e-06" izz="1.5e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.038935 -0.125483 -0.279704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/gbase_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.038935 -0.125483 -0.279704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/gbase_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor6_1">
+  <inertial>
+    <origin xyz="0.04631958605241957 -0.288594688666587 0.12592984428841508" rpy="0 0 0"/>
+    <mass value="0.24771286336269865"/>
+    <inertia ixx="3.8e-05" iyy="6.4e-05" izz="4.3e-05" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.061616 -0.437836 -0.131809" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.061616 -0.437836 -0.131809" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/motor6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="glinkr_1">
+  <inertial>
+    <origin xyz="4.3168479621557426e-05 0.005489355444972671 0.0014984981238657658" rpy="0 0 0"/>
+    <mass value="0.01630298468358439"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.025197 -0.149325 -0.282198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/glinkr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.025197 -0.149325 -0.282198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/glinkr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="clawr_1">
+  <inertial>
+    <origin xyz="-0.0047623050914065435 0.024422750111204483 0.0014943425639101782" rpy="0 0 0"/>
+    <mass value="0.012557670523597225"/>
+    <inertia ixx="4e-06" iyy="0.0" izz="4e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.024952 -0.180325 -0.285191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/clawr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.024952 -0.180325 -0.285191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/clawr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="glinkl_1">
+  <inertial>
+    <origin xyz="0.0004973925200013815 0.005155127642888696 0.001498638427966159" rpy="0 0 0"/>
+    <mass value="0.01672496232433782"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.052197 -0.149539 -0.281199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/glinkl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.052197 -0.149539 -0.281199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/glinkl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="clawl_1">
+  <inertial>
+    <origin xyz="0.0036533334329303183 0.02461343385388537 0.0014940341220606168" rpy="0 0 0"/>
+    <mass value="0.012557670523597225"/>
+    <inertia ixx="4e-06" iyy="0.0" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.051996 -0.180528 -0.284192" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/clawl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.051996 -0.180528 -0.284192" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rbmuse_description/meshes/clawl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin xyz="-0.079145 -0.00249 0.050267" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor1_1"/>
+</joint>
+
+<joint name="Revolute2" type="revolute">
+  <origin xyz="0.039383 0.012077 0.013863" rpy="0 0 0"/>
+  <parent link="motor1_1"/>
+  <child link="disk_1"/>
+  <axis xyz="4.2e-05 0.000227 1.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin xyz="1e-06 3e-06 0.016" rpy="0 0 0"/>
+  <parent link="disk_1"/>
+  <child link="motor2_1"/>
+</joint>
+
+<joint name="Revolute4" type="revolute">
+  <origin xyz="0.02308 0.00992 0.010247" rpy="0 0 0"/>
+  <parent link="motor2_1"/>
+  <child link="bigu_1"/>
+  <axis xyz="0.999969 -0.007924 -4e-05"/>
+  <limit upper="0.0" lower="-1.396263" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin xyz="-0.024998 0.00021 0.051001" rpy="0 0 0"/>
+  <parent link="bigu_1"/>
+  <child link="smallu_1"/>
+</joint>
+
+<joint name="Revolute6" type="revolute">
+  <origin xyz="0.026001 -0.000199 0.031499" rpy="0 0 0"/>
+  <parent link="smallu_1"/>
+  <child link="motor3_1"/>
+  <axis xyz="0.999969 -0.007924 -4e-05"/>
+  <limit upper="1.396263" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin xyz="0.139701 0.049903 0.000834" rpy="0 0 0"/>
+  <parent link="motor3_1"/>
+  <child link="lshape_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin xyz="-0.164584 -0.035245 0.044264" rpy="0 0 0"/>
+  <parent link="lshape_1"/>
+  <child link="smallu1_1"/>
+</joint>
+
+<joint name="Revolute9" type="revolute">
+  <origin xyz="0.026001 -0.000199 0.031499" rpy="0 0 0"/>
+  <parent link="smallu1_1"/>
+  <child link="motor4_1"/>
+  <axis xyz="0.999969 -0.007924 -4e-05"/>
+  <limit upper="0.0" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin xyz="0.215765 -0.035679 -0.049731" rpy="0 0 0"/>
+  <parent link="motor4_1"/>
+  <child link="lshape2_1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin xyz="-0.312085 -0.195485 0.020858" rpy="0 0 0"/>
+  <parent link="lshape2_1"/>
+  <child link="motor5_1"/>
+</joint>
+
+<joint name="Revolute41" type="revolute">
+  <origin xyz="0.071945 0.322667 0.059103" rpy="0 0 0"/>
+  <parent link="motor5_1"/>
+  <child link="gbase_1"/>
+  <axis xyz="0.007924 0.999969 -0.000228"/>
+  <limit upper="0.0" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid42" type="fixed">
+  <origin xyz="-0.022681 0.312353 -0.147895" rpy="0 0 0"/>
+  <parent link="gbase_1"/>
+  <child link="motor6_1"/>
+</joint>
+
+<joint name="Revolute43" type="revolute">
+  <origin xyz="0.036419 -0.288511 0.150389" rpy="0 0 0"/>
+  <parent link="motor6_1"/>
+  <child link="glinkr_1"/>
+  <axis xyz="4.2e-05 0.000227 1.0"/>
+  <limit upper="0.0" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid44" type="fixed">
+  <origin xyz="0.000245 0.031 0.002993" rpy="0 0 0"/>
+  <parent link="glinkr_1"/>
+  <child link="clawr_1"/>
+</joint>
+
+<joint name="Revolute45" type="revolute">
+  <origin xyz="-0.013262 0.024056 0.001495" rpy="0 0 0"/>
+  <parent link="gbase_1"/>
+  <child link="glinkl_1"/>
+  <axis xyz="4.2e-05 0.000227 1.0"/>
+  <limit upper="-1.047198" lower="0.0" effort="100" velocity="100"/>
+  <mimic joint="Revolute43" multiplier="-1" offset="0" />
+</joint>
+
+<joint name="Rigid46" type="fixed">
+  <origin xyz="0.000201 0.030989 0.002993" rpy="0 0 0"/>
+  <parent link="glinkl_1"/>
+  <child link="clawl_1"/>
+</joint>
+
+</robot>
